@@ -70,4 +70,25 @@ void main() {
   print(mahasiswaMap);
   print(mahasiswaMap['nama']);
   print(mahasiswaMap['Semester']);
+
+// Operator
+  int a, b;
+  a = 40;
+  b = 8;
+  print('a - ' + a.toString());
+  print('b - ' + b.toString());
+
+  print(a + b); // Penjumalahan
+  print(a - b); //Pengurangan
+  print(a * b); // Perkalian
+  print(a / b); // Pembagian
+  print(a % b); // Sisa bagi
+  print(a ~/ b); // Pembagian yang mengembalikan nilai integer
+
+  print(a > b);
+  print(a < b);
+  print(a >= b);
+  print(a <= b);
+  print(a == b);
+  print(a != b);
 }
