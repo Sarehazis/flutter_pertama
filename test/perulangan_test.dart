@@ -1,7 +1,6 @@
-
 void main() {
 //   Conditional
-  var nilai;
+  int nilai;
   nilai = 30;
 
   if (nilai >= 80) {
@@ -62,3 +61,5 @@ void hitungNilai3(mapel1, mapel2) {
   var total = mapel1 + mapel2;
   print(total);
 }
+
+
