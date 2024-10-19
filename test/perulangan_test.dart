@@ -23,7 +23,7 @@ void main() {
   print(p);
   var n = hitungNilai2(mapel1: 80, mapel2: 90);
   print(n);
-  var o = hitungNilai3(50, 90);
+  // var o = hitungNilai3(50, 90);
 }
 
 hitungNilai() {
