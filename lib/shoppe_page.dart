@@ -225,7 +225,7 @@ class _MyShoppeAppState extends State<MyShoppeApp> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 24),
                   CarouselSlider(
                     options: CarouselOptions(
                       height: MediaQuery.of(context).size.height * 0.3,
