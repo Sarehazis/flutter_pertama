@@ -149,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.orange[700],
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Text(
