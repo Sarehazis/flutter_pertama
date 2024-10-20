@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pertama/dana_page.dart';
 import 'package:flutter_pertama/latihan2_page.dart';
 import 'package:flutter_pertama/latihan3_page.dart';
+import 'package:flutter_pertama/shopeepay_page.dart';
 import 'package:flutter_pertama/shoppe_page.dart';
 
 void main() {
@@ -74,102 +75,141 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const Latihan2Page()),
-                );
-              },
-              child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(8),
+        child: Padding(
+          padding:
+              const EdgeInsets.all(16.0), // Menambah padding di seluruh body
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                // Menambahkan teks penjelasan
+                const Text(
+                  'Pilih Latihan Anda:',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                child: const Text(
-                  'Halaman 2',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                const SizedBox(height: 20),
+
+                // Menggunakan ElevatedButton untuk tombol
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => const Latihan2Page()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 24, vertical: 12),
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: const Text(
+                    'Latihan 2',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
                 ),
-              ),
-            ),
-            const SizedBox(height: 20),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const Latihan3Page()),
-                );
-              },
-              child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(8),
+                const SizedBox(height: 20),
+
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => const Latihan3Page()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 24, vertical: 12),
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: const Text(
+                    'Latihan 3',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
                 ),
-                child: const Text(
-                  'Halaman 3',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                const SizedBox(height: 20),
+
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => const MyDanaApp()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 24, vertical: 12),
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: const Text(
+                    'Dana',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
                 ),
-              ),
-            ),
-            const SizedBox(height: 20),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const MyDanaApp()),
-                );
-              },
-              child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(8),
+                const SizedBox(height: 20),
+
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => const MyShoppeApp()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 24, vertical: 12),
+                    backgroundColor: Colors.orange[700],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: const Text(
+                    'Shopee',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
                 ),
-                child: const Text(
-                  'Dana',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                const SizedBox(height: 20),
+
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => const MyShopeePay()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 24, vertical: 12),
+                    backgroundColor: Colors.orange[700],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: const Text(
+                    'Pulsa ShopeePay',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
                 ),
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const MyShoppeApp()),
-                );
-              },
-              child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-                decoration: BoxDecoration(
-                  color: Colors.orange[700],
-                  borderRadius: BorderRadius.circular(8),
+                const SizedBox(height: 40),
+                // Spasi antara tombol dan teks
+                Text(
+                  '$_counter',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineMedium
+                      ?.copyWith(fontSize: 24),
                 ),
-                child: const Text(
-                  'Shoppe',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
-                ),
-              ),
+              ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            // Spasi antara tombol dan teks
-            const Text(
-              'You have performed the following operations:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+          ),
         ),
       ),
       floatingActionButton: Align(
